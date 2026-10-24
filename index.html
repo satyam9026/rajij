@@ -161,7 +161,19 @@
       font-weight: 800;
       letter-spacing: .7px;
       text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    /* Hero Banner Image Style */
+    .hero-banner-img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      border-radius: 16px;
       margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: block;
     }
 
     h1 {
@@ -845,7 +857,7 @@
         </span>
       </a>
 
-      <a class="nav-cta telegram-link" href="https://t.me/+8i3nWHtP8oVjYTJl">
+      <a class="nav-cta telegram-link" href="https://telegram.me/+XPsHvIUgcaozYjVl">
         <span aria-hidden="true">➤</span>
         Join Telegram
       </a>
@@ -858,6 +870,11 @@
 
         <div class="hero-content">
           <span class="eyebrow">Welcome to our community</span>
+          
+          <!-- Image added right below "Welcome to our community" -->
+          <div>
+            <img src="YOUR_IMAGE_LINK_HERE.jpg" alt="Community Banner" class="hero-banner-img">
+          </div>
 
           <h1>
             Market Learning
@@ -875,9 +892,9 @@
           </p>
 
           <a class="primary-btn telegram-link"
-             href="https://t.me/+8i3nWHtP8oVjYTJl">
+             href="https://telegram.me/+XPsHvIUgcaozYjVl">
             <span class="telegram-icon" aria-hidden="true">➤</span>
-            Join Our Telegram Community
+            Join Our Community
             <span aria-hidden="true">→</span>
           </a>
 
@@ -1078,7 +1095,7 @@
     <a class="primary-btn telegram-link"
        href="https://t.me/+8i3nWHtP8oVjYTJl">
       <span class="telegram-icon" aria-hidden="true">➤</span>
-      Join Our Telegram Community →
+      Join Our Community →
     </a>
   </div>
 
@@ -1090,7 +1107,7 @@
       new Date().getFullYear();
 
     // Keep every Telegram CTA pointed to the same destination.
-    const TELEGRAM_URL = "https://t.me/+8i3nWHtP8oVjYTJl";
+    const TELEGRAM_URL = "https://telegram.me/+XPsHvIUgcaozYjVl";
 
     document.querySelectorAll(".telegram-link").forEach(function (link) {
       link.href = TELEGRAM_URL;
