@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06152e">
+
+  <title>Market Learning Community | Learn, Analyze & Grow</title>
+  <meta name="description" content="Explore educational resources, market insights, learning materials and community updates. Join our Telegram learning community.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #06152e;
+      --navy2: #0a2450;
+      --blue: #0788ff;
+      --gold: #ffd52b;
+      --white: #ffffff;
+      --muted: #bdcbe0;
+      --light: #f3f7fd;
+      --text: #10264b;
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin-inline: auto;
+    }
+
+    .navbar {
+      background: rgba(6, 21, 46, .97);
+      color: white;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -.4px;
+    }
+
+    .brand-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #123e77, #07152d);
+      border: 1px solid rgba(255,213,43,.5);
+      font-size: 25px;
+    }
+
+    .brand small {
+      display: block;
+      color: #b9cbe4;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--blue);
+      color: white;
+      padding: 12px 19px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+
+    .nav-cta:hover,
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #0076e5;
+    }
+
+    .hero {
+      background:
+        radial-gradient(ellipse at 80% 20%, rgba(0,130,255,.2), transparent 38%),
+        linear-gradient(135deg, #06152e 0%, #092753 58%, #06152e 100%);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+
+    .hero-inner {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+      padding-top: 76px;
+      padding-bottom: 78px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 6px 13px;
+      border-radius: 30px;
+      background: var(--gold);
+      color: #17233a;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1.08;
+      letter-spacing: -2.3px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(18px, 2vw, 23px);
+      color: #e3edfb;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .hero-copy {
+      max-width: 540px;
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 29px;
+    }
+
+    .primary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      background: linear-gradient(100deg, #0788ff, #0069df);
+      color: white;
+      padding: 17px 25px;
+      min-height: 58px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 10px 30px rgba(0,115,255,.23);
+      transition: transform .2s, background .2s;
+    }
+
+    .telegram-icon {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      background: rgba(255,255,255,.16);
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      margin-top: 25px;
+      color: #dce8f8;
+      font-size: 12px;
+    }
+
+    .hero-points span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-points b {
+      color: var(--gold);
+      font-size: 17px;
+    }
+
+    .hero-art {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 340px;
+    }
+
+    .orbit {
+      width: min(100%, 370px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle, #173f70 0%, #0b2850 54%, rgba(5,20,43,.2) 70%);
+      border: 1px solid rgba(100,170,255,.2);
+      position: relative;
+    }
+
+    .orbit::before,
+    .orbit::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 50%;
+      inset: 22px;
+    }
+
+    .orbit::after {
+      inset: 48px;
+      border-color: rgba(255,213,43,.2);
+    }
+
+    .book-stack {
+      position: relative;
+      z-index: 1;
+      width: 72%;
+      transform: rotate(-5deg);
+    }
+
+    .book {
+      border-radius: 9px 16px 16px 9px;
+      margin: 9px 0;
+      min-height: 62px;
+      padding: 13px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 13px rgba(0,0,0,.28);
+      border-left: 8px solid rgba(255,255,255,.25);
+    }
+
+    .book:nth-child(1) {
+      background: linear-gradient(100deg, #0e91e7, #0754a5);
+      color: white;
+    }
+
+    .book:nth-child(2) {
+      background: linear-gradient(100deg, #ffc83c, #c47b10);
+      color: #17233a;
+    }
+
+    .book:nth-child(3) {
+      background: linear-gradient(100deg, #13b88b, #08715d);
+      color: white;
+    }
+
+    .book span {
+      font-size: 23px;
+    }
+
+    .floating-note {
+      position: absolute;
+      right: -5px;
+      top: 28px;
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 14px;
+      text-align: center;
+      transform: rotate(5deg);
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 690px;
+      margin: 0 auto 42px;
+    }
+
+    .section-label {
+      color: #087bf0;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      margin-bottom: 9px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 13px;
+      color: #0b2852;
+    }
+
+    .section-heading p {
+      color: #61728b;
+      font-size: 15px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid #e4ebf5;
+      padding: 27px 23px;
+      border-radius: var(--radius);
+      box-shadow: 0 8px 25px rgba(19,48,90,.035);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(19,48,90,.09);
+    }
+
+    .feature-icon {
+      width: 53px;
+      height: 53px;
+      display: grid;
+      place-items: center;
+      border-radius: 17px;
+      background: #e9f4ff;
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+
+    .feature-card:nth-child(2) .feature-icon {
+      background: #e3faf3;
+    }
+
+    .feature-card:nth-child(3) .feature-icon {
+      background: #fff4d8;
+    }
+
+    .feature-card h3 {
+      font-size: 17px;
+      color: #10264b;
+      margin-bottom: 9px;
+    }
+
+    .feature-card p {
+      color: #62728a;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .focus-section {
+      background: white;
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .learning-visual {
+      background: linear-gradient(145deg, #08244b, #0d4176);
+      border-radius: 26px;
+      padding: 35px;
+      color: white;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .learning-visual::before {
+      content: "";
+      width: 260px;
+      height: 260px;
+      position: absolute;
+      right: -90px;
+      top: -90px;
+      border: 1px solid rgba(255,255,255,.13);
+      border-radius: 50%;
+      box-shadow: 0 0 0 30px rgba(255,255,255,.035),
+                  0 0 0 60px rgba(255,255,255,.025);
+    }
+
+    .visual-kicker {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 1.4px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .learning-visual h3 {
+      position: relative;
+      font-size: clamp(27px, 4vw, 37px);
+      line-height: 1.2;
+      margin-bottom: 14px;
+      max-width: 370px;
+    }
+
+    .learning-visual p {
+      position: relative;
+      color: #c8d9ee;
+      font-size: 14px;
+      max-width: 350px;
+    }
+
+    .mini-books {
+      position: relative;
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .mini-books span {
+      padding: 8px 12px;
+      background: rgba(255,255,255,.09);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 9px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .focus-copy h2 {
+      text-align: left;
+    }
+
+    .focus-copy > p {
+      color: #66768d;
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      color: white;
+      background: #0788ff;
+      border-radius: 50%;
+      font-size: 12px;
+    }
+
+    .community-banner {
+      background:
+        radial-gradient(ellipse at 20% 100%, rgba(0,136,255,.23), transparent 45%),
+        linear-gradient(120deg, #06152e, #0b2a56);
+      color: white;
+      border-radius: 24px;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .community-banner .banner-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .community-banner h2 {
+      color: white;
+      font-size: clamp(23px, 3vw, 32px);
+      margin-bottom: 7px;
+    }
+
+    .community-banner p {
+      color: #c2d5ed;
+      font-size: 13px;
+    }
+
+    .gold-btn {
+      flex-shrink: 0;
+      background: var(--gold);
+      color: #122544;
+      border-radius: 50px;
+      padding: 15px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 13px;
+      transition: transform .2s;
+    }
+
+    .gold-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .disclaimer {
+      padding: 25px 0;
+      background: #eaf1fa;
+      border-top: 1px solid #dce6f2;
+    }
+
+    .disclaimer-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .disclaimer h3 {
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: #16375f;
+    }
+
+    .disclaimer p {
+      color: #62728a;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #041126;
+      color: white;
+      padding: 25px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .footer-motto {
+      color: #bdcbe0;
+      font-size: 12px;
+    }
+
+    .footer-copy {
+      color: #92a5c0;
+      font-size: 11px;
+    }
+
+    .mobile-cta {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-top: 55px;
+        padding-bottom: 48px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-copy {
+        margin-inline: auto;
+      }
+
+      .hero-points {
+        justify-content: center;
+      }
+
+      .hero-art {
+        min-height: 280px;
+      }
+
+      .orbit {
+        width: min(80%, 310px);
+      }
+
+      .floating-note {
+        right: 2%;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .community-banner {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 13px;
+        gap: 8px;
+      }
+
+      .brand-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 21px;
+      }
+
+      .brand small {
+        font-size: 9px;
+      }
+
+      .nav-cta {
+        font-size: 11px;
+        padding: 11px 13px;
+      }
+
+      .hero-inner {
+        padding-top: 44px;
+      }
+
+      h1 {
+        font-size: clamp(37px, 10vw, 48px);
+        letter-spacing: -1.6px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+      }
+
+      .hero-copy {
+        font-size: 13px;
+      }
+
+      .primary-btn {
+        width: 100%;
+        padding: 15px 12px;
+        font-size: 13px;
+      }
+
+      .hero-points {
+        gap: 9px 13px;
+        font-size: 10px;
+      }
+
+      .hero-art {
+        min-height: 245px;
+      }
+
+      .book {
+        min-height: 50px;
+        padding: 10px 13px;
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 58px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 28px;
+      }
+
+      .section-heading p {
+        font-size: 13px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 13px;
+      }
+
+      .feature-card {
+        padding: 22px;
+      }
+
+      .feature-card p {
+        font-size: 13px;
+      }
+
+      .learning-visual {
+        padding: 27px;
+        min-height: 280px;
+      }
+
+      .focus-copy h2 {
+        font-size: 29px;
+      }
+
+      .community-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 27px 23px;
+      }
+
+      .gold-btn {
+        width: 100%;
+      }
+
+      .disclaimer-inner {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .mobile-cta {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 11px 5%;
+        padding-bottom: max(11px, env(safe-area-inset-bottom));
+        background: rgba(4,17,38,.96);
+        border-top: 1px solid rgba(255,255,255,.12);
+        backdrop-filter: blur(12px);
+      }
+
+      .mobile-cta .primary-btn {
+        min-height: 48px;
+        padding: 12px;
+      }
+
+      body {
+        padding-bottom: 72px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#" aria-label="Market Learning Community home">
+        <span class="brand-icon" aria-hidden="true">📘</span>
+        <span>
+          Market Learning Community
+          <small>LEARN · ANALYZE · GROW</small>
+        </span>
+      </a>
+
+      <a class="nav-cta telegram-link" href="https://t.me/+8i3nWHtP8oVjYTJl">
+        <span aria-hidden="true">➤</span>
+        Join Telegram
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-content">
+          <span class="eyebrow">Welcome to our community</span>
+
+          <h1>
+            Market Learning
+            <span>Community</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Your Daily Dose of Learning, Insights & Growth.
+          </p>
+
+          <p class="hero-copy">
+            Discover educational information, useful learning resources,
+            market-related concepts and community updates in one place.
+            Learn at your own pace and build your understanding step by step.
+          </p>
+
+          <a class="primary-btn telegram-link"
+             href="https://t.me/+8i3nWHtP8oVjYTJl">
+            <span class="telegram-icon" aria-hidden="true">➤</span>
+            Join Our Telegram Community
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <div class="hero-points">
+            <span><b>✓</b> Educational Resources</span>
+            <span><b>✓</b> Free to Join*</span>
+            <span><b>✓</b> Community Updates</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Learning and growth illustration">
+          <div class="orbit">
+            <div class="book-stack">
+              <div class="book">
+                <span>01</span> LEARN
+              </div>
+              <div class="book">
+                <span>02</span> ANALYZE
+              </div>
+              <div class="book">
+                <span>03</span> GROW
+              </div>
+            </div>
+          </div>
+          <div class="floating-note">
+            Better Learning<br>
+            Brighter Future ✦
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-label">What you can explore</div>
+          <h2>Learn Something New Every Day</h2>
+          <p>
+            Explore useful educational content and resources designed
+            to support your learning journey.
+          </p>
+        </div>
+
+        <div class="features">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📊</div>
+            <h3>Market Insights</h3>
+            <p>
+              Explore general market concepts, information and
+              educational perspectives to expand your understanding.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🎓</div>
+            <h3>Educational Content</h3>
+            <p>
+              Learn fundamental concepts through informative posts,
+              easy explanations and practical examples.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">📚</div>
+            <h3>Helpful Resources</h3>
+            <p>
+              Discover guides, learning materials and useful
+              references to support your knowledge-building process.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🔔</div>
+            <h3>Timely Updates</h3>
+            <p>
+              Find community announcements and new educational
+              posts when updates are shared.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🤝</div>
+            <h3>Learning Together</h3>
+            <p>
+              Connect with a learning-focused community and
+              explore new ideas at your own pace.
+            </p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">🛡️</div>
+            <h3>Responsible Learning</h3>
+            <p>
+              Focus on knowledge, careful research, informed
+              thinking and understanding potential risks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section focus-section">
+      <div class="container focus-grid">
+
+        <div class="learning-visual">
+          <div class="visual-kicker">OUR LEARNING APPROACH</div>
+          <h3>Knowledge First. Decisions With Understanding.</h3>
+          <p>
+            Build a stronger foundation with educational material
+            that encourages independent learning and thoughtful research.
+          </p>
+
+          <div class="mini-books">
+            <span>LEARN</span>
+            <span>UNDERSTAND</span>
+            <span>IMPROVE</span>
+          </div>
+        </div>
+
+        <div class="focus-copy">
+          <div class="section-label">Our focus</div>
+          <h2>Learning Made Simple</h2>
+          <p>
+            We aim to make information easier to explore through
+            clear explanations, helpful resources and educational updates.
+          </p>
+
+          <ul class="check-list">
+            <li><span class="check">✓</span> Easy-to-understand educational content</li>
+            <li><span class="check">✓</span> General market knowledge and concepts</li>
+            <li><span class="check">✓</span> Learning resources and informative guides</li>
+            <li><span class="check">✓</span> Community announcements and updates</li>
+            <li><span class="check">✓</span> Responsible and independent learning</li>
+          </ul>
+
+          <a class="primary-btn telegram-link"
+             href="https://t.me/+8i3nWHtP8oVjYTJl">
+            <span class="telegram-icon" aria-hidden="true">➤</span>
+            Explore the Community
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 10px;">
+      <div class="container">
+        <div class="community-banner">
+          <div>
+            <div class="banner-label">Your learning journey starts here</div>
+            <h2>Join Our Telegram Community</h2>
+            <p>Educational resources · Helpful information · Community updates</p>
+          </div>
+
+          <a class="gold-btn telegram-link"
+             href="https://t.me/+8i3nWHtP8oVjYTJl">
+            ➤ Join Telegram <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="disclaimer">
+      <div class="container disclaimer-inner">
+        <div>
+          <h3>Educational Disclaimer</h3>
+          <p>
+            Content is provided for general educational and informational
+            purposes only. It is not financial or investment advice.
+            No profits or financial outcomes are promised or guaranteed.
+          </p>
+        </div>
+
+        <div>
+          <h3>Important Information</h3>
+          <p>
+            Financial markets involve risk. Do your own research and
+            consult a qualified professional when appropriate.
+            Verify all information independently before making decisions.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">📘 Market Learning Community</div>
+      <div class="footer-motto">Learn · Analyze · Grow</div>
+      <div class="footer-copy">
+        © <span id="year"></span> Market Learning Community
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="primary-btn telegram-link"
+       href="https://t.me/+8i3nWHtP8oVjYTJl">
+      <span class="telegram-icon" aria-hidden="true">➤</span>
+      Join Our Telegram Community →
+    </a>
+  </div>
+
+  <script>
+    "use strict";
+
+    // Update the displayed year automatically.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Keep every Telegram CTA pointed to the same destination.
+    const TELEGRAM_URL = "https://t.me/+8i3nWHtP8oVjYTJl";
+
+    document.querySelectorAll(".telegram-link").forEach(function (link) {
+      link.href = TELEGRAM_URL;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    });
+  </script>
+
+</body>
+</html>
