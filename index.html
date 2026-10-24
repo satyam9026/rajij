@@ -164,15 +164,20 @@
       margin-bottom: 15px;
     }
 
-    /* Hero Banner Image Style */
+    /* Perfect Responsive Size for Hero Banner Image */
+    .hero-banner-wrapper {
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: center;
+    }
+
     .hero-banner-img {
-      width: 100%;
-      max-width: 420px;
-      height: auto;
-      border-radius: 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.15);
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--gold);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
       display: block;
     }
 
@@ -871,9 +876,9 @@
         <div class="hero-content">
           <span class="eyebrow">Welcome to our community</span>
           
-          <!-- Image added right below "Welcome to our community" -->
-          <div>
-            <img src="ns.jpg" alt="Community Banner" class="hero-banner-img">
+          <!-- Optimized Image Wrapper -->
+          <div class="hero-banner-wrapper">
+            <img src="YOUR_IMAGE_LINK_HERE.jpg" alt="Community Banner" class="hero-banner-img">
           </div>
 
           <h1>
@@ -1028,93 +1033,4 @@
             <li><span class="check">✓</span> General market knowledge and concepts</li>
             <li><span class="check">✓</span> Learning resources and informative guides</li>
             <li><span class="check">✓</span> Community announcements and updates</li>
-            <li><span class="check">✓</span> Responsible and independent learning</li>
-          </ul>
-
-          <a class="primary-btn telegram-link"
-             href="https://t.me/+8i3nWHtP8oVjYTJl">
-            <span class="telegram-icon" aria-hidden="true">➤</span>
-            Explore the Community
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section" style="padding-top: 10px;">
-      <div class="container">
-        <div class="community-banner">
-          <div>
-            <div class="banner-label">Your learning journey starts here</div>
-            <h2>Join Our Telegram Community</h2>
-            <p>Educational resources · Helpful information · Community updates</p>
-          </div>
-
-          <a class="gold-btn telegram-link"
-             href="https://t.me/+8i3nWHtP8oVjYTJl">
-            ➤ Join Telegram <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="disclaimer">
-      <div class="container disclaimer-inner">
-        <div>
-          <h3>Educational Disclaimer</h3>
-          <p>
-            Content is provided for general educational and informational
-            purposes only. It is not financial or investment advice.
-            No profits or financial outcomes are promised or guaranteed.
-          </p>
-        </div>
-
-        <div>
-          <h3>Important Information</h3>
-          <p>
-            Financial markets involve risk. Do your own research and
-            consult a qualified professional when appropriate.
-            Verify all information independently before making decisions.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">📘 Market Learning Community</div>
-      <div class="footer-motto">Learn · Analyze · Grow</div>
-      <div class="footer-copy">
-        © <span id="year"></span> Market Learning Community
-      </div>
-    </div>
-  </footer>
-
-  <div class="mobile-cta">
-    <a class="primary-btn telegram-link"
-       href="https://t.me/+8i3nWHtP8oVjYTJl">
-      <span class="telegram-icon" aria-hidden="true">➤</span>
-      Join Our Community →
-    </a>
-  </div>
-
-  <script>
-    "use strict";
-
-    // Update the displayed year automatically.
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    // Keep every Telegram CTA pointed to the same destination.
-    const TELEGRAM_URL = "https://telegram.me/+XPsHvIUgcaozYjVl";
-
-    document.querySelectorAll(".telegram-link").forEach(function (link) {
-      link.href = TELEGRAM_URL;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    });
-  </script>
-
-</body>
-</html>
+            <li><span class="check">✓</span> Responsible
